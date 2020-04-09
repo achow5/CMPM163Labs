@@ -29,6 +29,10 @@
 			function animate() {
 				requestAnimationFrame(animate);
 				rederer.render(scene, camera);
+
+				geometry.rotateX(0.01);
+				geometry.rotateY(0.01);
+				
 			}
 			animate();
 
