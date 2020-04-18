@@ -101,6 +101,9 @@
 
 			var geometry3, material3, mesh3;
 
+			//add another cool cube
+			var geometry4, material4, mesh4;
+
 			function addCoolCube() {
 				if(count == 2) {
 
@@ -111,6 +114,13 @@
 							THREE.Color(0x00ebdF)}
 					};
 
+					let uniforms2 = {
+						colorB: {type: 'vec3', value:new
+							THREE.Color(0xCCCAAC)},
+						colorA: {type: 'vec3', value:new
+							THREE.Color(0xCCCCCA)}
+					}
+
 					geometry3 = new THREE.BoxGeometry(1, 1, 1);
 					material3 = new THREE.ShaderMaterial({
 						uniforms: uniforms,
@@ -120,6 +130,18 @@
 					mesh3 = new THREE.Mesh(geometry3, material3);
 					mesh3.position.x=2;
 					scene.add(mesh3);
+
+					geometry4 = new THREE.BoxGeometry(1, 1, 1);
+					material4 = new THREE.ShaderMaterial({
+						uniforms: uniforms2,
+						fragmentShader: fshader,
+						vertexShader: vshader,
+						precision: "mediump"});
+					mesh4 = new THREE.Mesh(geometry4, material4);
+					mesh4.position.x=-1;
+					mesh4.position.y = 2;
+					scene.add(mesh4);
+
 				}
 			}
 
@@ -134,6 +156,11 @@
 				if(geometry3) {
 					geometry3.rotateX(0.01);
 					geometry3.rotateY(0.01);
+				}
+
+				if(geometry4) {
+					geometry4.rotateX(0.02);
+					geometry4.rotateY(0.01);
 				}
 
 				renderer.render(scene, camera);
