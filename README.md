@@ -1,12 +1,5 @@
 # CMPM163Labs
 
-
-lab 2 - 
-link to video:
-https://drive.google.com/file/d/1TJrb531qbUYs8vfD9Jt87cmD0bMApURK/view?usp=sharing
-
-![github-small](images/lab2screenshot.png)
-
 lab 3 -
 link to video:
 https://drive.google.com/file/d/1_Tlb3k_zGCBZ6box8ST1XJiVZ3zvoBvy/view?usp=sharing
