@@ -10,6 +10,6 @@ Middle Cube: Basic cube created using Phong model specular lighting and Three.js
 
 Bottom Left Cube: Cube with modified clearcoat using Phong model specular lighting and Three.js mateirals
 
-Right Cube: Cube created with shaders which uses color interpolation. 
+Right Cube: Cube created with shaders which uses color interpolation between cyan and light blue
 
-Top Left Cube: Cube created with shaders and modified colors and color interpolation to appear paler and smoother
+Top Left Cube: Cube created with shaders and modified colors and color interpolation to appear paler and smoother, going between light shades of red and yellow
