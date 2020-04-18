@@ -12,6 +12,49 @@
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
+
+
+			//shader loading stuff
+			THREE.Cache.enabled = true;
+			var count = 0;
+			var loader = new THREE.FileLoader();
+			var fshader, vshader;
+
+			loader.load('shaders/vertexShader.vert',
+			// onLoad callback
+			function (data) {
+				console.log(data); // output the text to the console
+				vshader = data;
+				count += 1;
+				addCoolCube(); // we will write this method
+			},
+			// onProgress callback
+			function (xhr) {
+				console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+			},
+			// onError callback
+			function (err) {
+				console.error('An error happened');
+			});
+
+			loader.load('shaders/fragmentShader.frag',
+			// onLoad callback
+			function (data) {
+				console.log(data); // output the text to the console
+				fshader = data;
+				count += 1;
+				addCoolCube(); // we will write this method
+			},
+			// onProgress callback
+			function (xhr) {
+				console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+			},
+			// onError callback
+			function (err) {
+				console.error('An error happened');
+			});
+
+
 			// setup the scene
       		var scene = new THREE.Scene();
       		var camera = new THREE.PerspectiveCamera(75, 
@@ -54,6 +97,32 @@
 			light.position.set(10, 10, 10);
 			scene.add(light);
 
+			//add a cool cube
+
+			var geometry3, material3, mesh3;
+
+			function addCoolCube() {
+				if(count == 2) {
+
+					let uniforms = {
+						colorB: {type: 'vec3', value:new
+							THREE.Color(0xABC5E6)},
+						colorA: {type: 'vec3', value:new
+							THREE.Color(0x00ebdF)}
+					};
+
+					geometry3 = new THREE.BoxGeometry(1, 1, 1);
+					material3 = new THREE.ShaderMaterial({
+						uniforms: uniforms,
+						fragmentShader: fshader,
+						vertexShader: vshader,
+						precision: "mediump"});
+					mesh3 = new THREE.Mesh(geometry3, material3);
+					mesh3.position.x=2;
+					scene.add(mesh3);
+				}
+			}
+
 			function animate() {
 				requestAnimationFrame(animate);
 				geometry.rotateX(0.01);
@@ -61,6 +130,11 @@
 
 				geometry2.rotateX(0.01);
 				geometry2.rotateY(0.02);
+
+				if(geometry3) {
+					geometry3.rotateX(0.01);
+					geometry3.rotateY(0.01);
+				}
 
 				renderer.render(scene, camera);
 			}
