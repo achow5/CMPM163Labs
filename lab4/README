@@ -1,0 +1,10 @@
+Link to video:
+
+Answers to 24: 
+
+uv formula:
+a. If the u value is 1 then the x value is 0, as these correspond to running along the top row of the cube
+
+b. If the v value is 1 then the y value is 0, as these correspond to going up the first column of the cube
+
+c. The color would be white due to rounding the coordinates up to get the nearest approximation.
