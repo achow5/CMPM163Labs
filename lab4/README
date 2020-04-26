@@ -3,8 +3,20 @@ Link to video:
 Answers to 24: 
 
 uv formula:
-a. If the u value is 1 then the x value is 0, as these correspond to running along the top row of the cube
+a. The conversion formula is x = 8u 
 
-b. If the v value is 1 then the y value is 0, as these correspond to going up the first column of the cube
+b. The conversion formula is y = 8 - 8v
 
 c. The color would be white due to rounding the coordinates up to get the nearest approximation.
+
+Cubes: 
+
+Middle Cube: Basic cube with a texture and normal map 
+
+Leftmost Cube: Basic cube with a texture and no normal map (a copy of the first w/o a normal map)
+
+Bottom Cube: Another cube with a normal map and mismatched texture.
+
+Right Cube: A cube created using a shader and uniform to get a texture (but no lighting).
+
+Top Right Cube: A cube created and tiled by modifying the vUv variable in the fragmentShader and using fract
