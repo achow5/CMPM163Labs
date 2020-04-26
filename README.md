@@ -7,9 +7,15 @@ https://drive.google.com/open?id=19cPHHFywMuQjyEBRa-bEH5N-8krVOPvP
 Answers to 24: 
 
 uv formula:
-a. The conversion formula is x = 8u 
+a. 
+given the width of the grid:
+The conversion formula is x = (width-1)u 
+i.e. in this grid x = 7u
 
-b. The conversion formula is y = 8 - 8v
+b. 
+given the height of the grid:
+The conversion formula is y = (height - 1) - (height - 1)v 
+i.e. in this grid y = 7 - 7v
 
 c. The color would be white due to rounding the coordinates up to get the nearest approximation.
 
