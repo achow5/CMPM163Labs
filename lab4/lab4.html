@@ -18,10 +18,8 @@
 
 			function addTextureShaderCube() {
 			if(count == 2) {
-			let uniforms = {
-			        		colorB: {type: 'vec3', value: new THREE.Color(0xACB6E5)},
-			        		colorA: {type: 'vec3', value: new THREE.Color(0x74ebd5)}
-			        	 };
+			        	var uniforms = {texture1: { type: "t", value: 
+							THREE.ImageUtils.loadTexture("157.jpg")}};
 				
 			      		geometry1 = new THREE.BoxGeometry(1, 1, 1);
 			      		material1 =  new THREE.ShaderMaterial({
@@ -36,12 +34,45 @@
 			    	}
 			}
 
+			var geometry2, material2, mesh2;
+
+			//copy for new cube
+			function addTextureShaderCube2() {
+			if(count == 2) {
+
+		        		var uniforms = {texture1: { type: "t", value: 
+							THREE.ImageUtils.loadTexture("176.jpg")}};
+
+						//uniforms.texture1.texture.wrapS = THREE.RepeatWrapping;
+						//uniforms.texture1.texture.wrapT = THREE.RepeatWrapping;
+
+						geometry2 = new THREE.BoxGeometry(1, 1, 1);
+			      		material2 =  new THREE.ShaderMaterial({
+			            		uniforms: uniforms,
+			      			fragmentShader: fshader2,
+			              		vertexShader: vshader2,
+			      			precision: "mediump"});
+
+			      		mesh2 = new THREE.Mesh(geometry2, material2);
+			      		mesh2.position.x = 2;
+			      		mesh2.position.y = 2;
+			      		scene.add(mesh2);
+
+			    	}
+
+
+			}			
+
+
+			var uniforms = {texture1: { type: "t", value: 
+			THREE.ImageUtils.loadTexture("157.jpg")}};
 
 			//loader
 			THREE.Cache.enabled = true;
 			var count = 0;
+			var count2 = 0;
 			var loader = new THREE.FileLoader();
-			var fshader, vshader;
+			var fshader, vshader, fshader2, vshader2;
 
 			loader.load('shaders/vertexShader.vert',
 			// onLoad callback
@@ -76,6 +107,47 @@
 			   	function (err) {
 			   		console.error('An error happened');
 				});
+
+			var uniforms = {texture1: { type: "t", value: 
+			THREE.ImageUtils.loadTexture("176.jpg")}};
+
+
+			//copy for new cube
+			loader.load('shaders/vertexShader2.vert',
+			// onLoad callback
+				function (data) {
+		    		console.log(data); // output the text to the console
+					vshader2 = data;
+			    		count2 += 1;
+			    		addTextureShaderCube2(); // we will write this method
+			    },
+			    // onProgress callback
+			    function (xhr) {
+			    console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+			    },
+			    // onError callback
+			    function (err) {
+			    	console.error('An error happened');
+			    });
+
+			loader.load('shaders/fragmentShader2.frag',
+		   		// onLoad callback
+		   		function (data) {
+				console.log(data); // output the text to the console
+		      		fshader2 = data;
+		      		count2 += 1;
+		     		addTextureShaderCube2(); // we will write this method
+		      	},
+		      	// onProgress callback
+		      	function (xhr) {
+		      		console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+		    	},
+				// onError callback
+			   	function (err) {
+			   		console.error('An error happened');
+				});
+
+
 
       		var scene = new THREE.Scene();
       		var camera = new THREE.PerspectiveCamera(75, 
