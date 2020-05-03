@@ -1,32 +1,23 @@
 # CMPM163Labs
 
-lab 4- 
+lab 5- 
 Link to video:
-https://drive.google.com/open?id=19cPHHFywMuQjyEBRa-bEH5N-8krVOPvP
+https://drive.google.com/open?id=1hiV4BzRq_s42vJyM1txN_VGJpMULwOgs
 
-Answers to 24: 
+Changes made:
 
-uv formula:
-a. 
-given the width of the grid:
-The conversion formula is x = (width-1)u 
-i.e. in this grid x = 7u
+In general, the changes were made to make the game feel more like the Motorcycle Chase minigame from Final Fantasy 7.
 
-b. 
-given the height of the grid:
-The conversion formula is y = (height - 1) - (height - 1)v 
-i.e. in this grid y = 7 - 7v
+Audio-
+The background music was changed to the song "Crazy Motorcycle Chase" from Final Fantasy 7
 
-c. The color would be white due to rounding the coordinates up to get the nearest approximation.
+Controls -
+The maximum speed of the kart was doubled
 
-Cubes: 
+Visual- 
+Particle effects were added to the wheels
+The skybox, lighting, and materials were all changed to have more of a dark green look
 
-Middle Cube: Basic cube with a texture and normal map 
-
-Leftmost Cube: Basic cube with a texture and no normal map (a copy of the first w/o a normal map)
-
-Bottom Cube: Another cube with a normal map and mismatched texture.
-
-Right Cube: A cube created using a shader and uniform to get a texture (but no lighting).
-
-Top Right Cube: A cube created and tiled by modifying the vUv variable in the fragmentShader and using fract
+Gameplay -
+The objective was changed to complete 2 laps in order to win
+A ramp was added near the goal line
