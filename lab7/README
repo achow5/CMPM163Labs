@@ -1,0 +1,11 @@
+Lab 7 
+Link to Video - 
+https://drive.google.com/open?id=13qBaB0IESFEFQrCWpwZzDIThd3TNDMG4
+
+Description: I created my lab by following the shader tutorial and water effect creation tutorials provided in the handout. 
+After creating the initial rough sphere from the tutorial, I made several copies of the sphere and changed their sizes and rotations
+in order to create a mountain range and terrain. I resized the flowing water to create a river, and created another flowing plane
+to use as a waterfall. Afterwards I added several cubes, spheres, and cylinders to symbolize other objects in the environment and 
+added a particle system at the bottom of the waterfall to act as splashing bits of water.
+
+Lab partner check in: 
