@@ -11,3 +11,4 @@ to use as a waterfall. Afterwards I added several cubes, spheres, and cylinders 
 added a particle system at the bottom of the waterfall to act as splashing bits of water.
 
 Lab partner check in: 
+Partner: Yash Solanki
