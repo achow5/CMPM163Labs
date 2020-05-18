@@ -12,3 +12,7 @@ added a particle system at the bottom of the waterfall to act as splashing bits 
 
 Lab partner check in: 
 Partner: Yash Solanki
+
+Yash also did part 1 of the lab. For the creative portion of their lab they added colors to just about everything in the scene and added a skybox as well. I think that the colors worked really well to bring the scene to life. On the water they messed around with the shader graph to create a texture on the water using voronoi noise. Yash used the Universal Render Pipeline, while I used HDRP; this has gotten me interested in seeing what the differences between the two are.
+
+We did not work together on any parts of the lab.
