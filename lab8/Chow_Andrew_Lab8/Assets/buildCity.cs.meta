@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c446f27b21d653d429746fe472555da9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - xstreets: {fileID: 6995800196495057936, guid: 777a16d34cfca0545aac6c72967b8849,
+      type: 3}
+  - zstreets: {fileID: 4497031682474690537, guid: a53f847756e1a2347a02a725bc910027,
+      type: 3}
+  - crossroad: {fileID: 1241577206175356485, guid: 367ff2356c4c92248a1d7ed0b2aefd03,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
