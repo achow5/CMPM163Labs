@@ -1,18 +1,18 @@
 # CMPM163Labs
 
-Lab 7 - Part 1 - Unity
+Lab 8 - Part 1 - Unity
 Link to Video - 
-https://drive.google.com/open?id=13qBaB0IESFEFQrCWpwZzDIThd3TNDMG4
+https://drive.google.com/open?id=1oWKnRW0oXn_DhPf5-rYe4lO3ZAAOa2Xu
 
-Description: I created my lab by following the shader tutorial and water effect creation tutorials provided in the handout. 
-After creating the initial rough sphere from the tutorial, I made several copies of the sphere and changed their sizes and rotations
-in order to create a mountain range and terrain. I resized the flowing water to create a river, and created another flowing plane
-to use as a waterfall. Afterwards I added several cubes, spheres, and cylinders to symbolize other objects in the environment and 
-added a particle system at the bottom of the waterfall to act as splashing bits of water.
+Screenshot of the Generated City:
+![github-small](https://github.com/achow5/CMPM163Labs/blob/master/images/lab8screenshot.png)
+
+
+Screenshot of Inspiration:
+![github-small](https://github.com/achow5/CMPM163Labs/blob/master/images/lab8screenshotMidgar.png)
+
+
+I based my generated city off of the fictional city of Midgar from the game Final Fantasy 7. I changed the generated city by varying the sizes of each of the buildings and making everything more green tinted. I also added a dark green skybox, the same one I used for lab 5 which can be found in this same github repository under lab5. Finally, I made one building in the center very large to represent the Shinra Tower from the game and some medium sized buildings to represent the Mako Reactors with accompanying spotlights.
 
 Lab partner check in: 
-Partner: Yash Solanki
-
-Yash also did part 1 of the lab. For the creative portion of their lab they added colors to just about everything in the scene and added a skybox as well. I think that the colors worked really well to bring the scene to life. On the water they messed around with the shader graph to create a texture on the water using voronoi noise. Yash used the Universal Render Pipeline, while I used HDRP; this has gotten me interested in seeing what the differences between the two are.
-
-We did not work together on any parts of the lab.
+Partner: Sammy Siu
