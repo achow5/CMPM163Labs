@@ -16,4 +16,5 @@ I based my generated city off of the fictional city of Midgar from the game Fina
 
 Lab partner check in: 
 Partner: Sammy Siu
+
 I reached out to my assigned partner using Discord on Sunday, May 24th to perform a check in. I did not recieve any reply
